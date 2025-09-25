@@ -10,7 +10,6 @@ public class EmojiTextAdapter implements TextSender {
     }
     @Override
     public void send(String text) {
-        String emojiMessage = replacer.apply(text);
-        service.deliver(emojiMessage);
+        service.deliver(replacer.apply(text));
     }
 }
